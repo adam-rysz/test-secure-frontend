@@ -22,7 +22,7 @@ describe('Login page tests', () => {
             fixture: 'users.json'
         })
         cy.get('[name=password]').should('be.visible')
-        cy.percySnapshot()
+        cy.percySnapshot('Home page', { widths:[1200]})
 
         // when
         cy.get('[name=username]').type(user.username)
